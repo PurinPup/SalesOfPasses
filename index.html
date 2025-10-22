@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roblox Gamepass Tracker</title>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background: #f6f8fa;
+        color: #333;
+        text-align: center;
+        padding: 60px;
+      }
+      h1 {
+        color: #0078ff;
+      }
+      .sale-box {
+        display: inline-block;
+        background: white;
+        padding: 25px 40px;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        font-size: 1.2em;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🎮 Latest Roblox Gamepass Sale</h1>
+    <div class="sale-box" id="saleMessage">
+      Loading latest sale...
+    </div>
+
+    <script>
+      // -- STEP 1: Replace this array with your own gamepasses or sales data --
+      const recentSales = [
+        { buyer: "CoolPlayer123", item: "Speed Boost", price: 50 },
+        { buyer: "Guest42", item: "VIP Access", price: 120 },
+        { buyer: "BuilderMan", item: "Golden Hat", price: 300 }
+      ];
+
+      // -- STEP 2: Display the most recent one --
+      const latest = recentSales[0];
+      document.getElementById("saleMessage").innerText =
+        `🛒 Someone (${latest.buyer}) has bought "${latest.item}" for ${latest.price} Robux!`;
+    </script>
+  </body>
+</html>
